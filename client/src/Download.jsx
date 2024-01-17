@@ -35,7 +35,6 @@ const Download = () => {
     const videoId = link.split("https://youtu.be/")[1];
     const url = `http://localhost:3001/video-download?id=${videoId}&resu=${resu}`;
 
-    // Attempt to start the download in a new window
     try {
       window.open(url, "_blank");
     } catch (error) {
@@ -45,8 +44,8 @@ const Download = () => {
   };
 
   return (
-    <div className="w-full min-h-screen bg-gray-100 flex justify-center items-center">
-      <div className="w-[400px] bg-white p-8 rounded-md shadow-md">
+    <div className="flex items-center justify-center min-h-screen bg-white">
+      <div className="w-[400px] bg-white p-5 rounded-md shadow-md">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">
           YouTube Video Downloader
         </h2>
